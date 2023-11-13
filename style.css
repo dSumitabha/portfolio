@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@800&family=Poppins:wght@100;400;700;800&family=Raleway:wght@100;400;700;800&display=swap');
+:root {
+	--grey : #ececec;
+	--red : #D9534F;
+	--blue : #355C7D;
+	--green : #539E52;
+	--soft-gray :#767676;
+	--dusty-blue : #5E81AC;
+	--subtle-green : #91AA52;
+	--warm-taupe : #A89F91;
+
+}
+body {
+	overflow-x : hidden;
+}
+* {
+	margin : 0;
+	padding : 0;
+	/* box-sizing : border-box; */
+}
+section {
+	width : 100%;
+	min-height : 100vh;
+	border-bottom : 0.5rem solid var(--soft-gray);
+}
+			/* Intro Section with Tag line */
+section.intro {
+	background-color : var(--grey);
+	display : flex;
+	flex-flow : row wrap;	
+	align-items : center;
+	justify-content : space-around;
+
+}
+.tagline {
+	font-family : 'Poppins', sans-serif;
+	font-size : 8vw;
+	font-weight : 700;
+	color : var(--red);
+}
+.intro_text {
+	max-width : 512px;
+	padding : 1rem;
+}
+.intro_text p {
+	font-family : 'Raleway', sans-serif;
+	width : 100%;
+	animation : 
+		typing 10s 407steps;
+		blink 0.4s step-end infinite alternate;
+}
+@keyframes typing {
+	0% { width : 0}
+}
+
+@keyframes blink {
+	50% { border-color : transparent }
+}
+	
+strong {
+	color : var(--red);
+}
+			/* Hero Section */
+section.hero {
+	background :url(res/saikat.jpeg);    
+	background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+	display : flex;
+	flex-flow : column-reverse wrap;
+	align-items : center;
+	
+}
+.name {
+	font-size : 8vw;
+	font-family: 'Playfair Display', serif;
+	font-weight : 800;
+	color : var(--grey);
+	margin-bottom : 10vh;
+}
+			/* Navigation Bar */
+nav.nav-menu {
+	position : sticky;
+	top : 0;
+	background-color : #000;
+	z-index : 9;
+	
+}
+ul.nav-lists {
+	height : 10vh;
+	list-style : none;
+	display : flex;
+	align-items : center;
+	justify-content : space-around;
+}
+
+.nav-lists li a {
+	text-decoration : none;
+	color : var(--grey);
+}
+.nav-lists li a:hover {
+	text-decoration : underline;
+}
+			/* Projects Section */
+section.projects {
+	background-color : var(--red);
+	padding : 2.5rem 0;
+	background-color : var(--gray);
+	
+}
+.container {
+	margin : 0 auto;
+	width : 90vw;
+	display : flex;
+	flex-flow : row wrap;
+	justify-content : space-around;
+	row-gap : 6rem;
+}
+.card {
+	background : darkgrey;
+	width : 30rem;
+	aspect-ratio: 16/9;
+	display : flex;
+	flex-flow : column nowrap;
+	justify-content : flex-end;
+	padding-bottom : 2.5rem;
+	box-sizing : border-box;
+	
+}
+.card:hover {
+	scale : 1.01;
+}
+.card p , .card h3 {
+	width : 20rem;
+	margin : 0 auto;
+	color : var(--blue);
+}
+#netflix {
+	background : url('res/projects/netflix_clone.webp');
+	background-size : cover;
+}
+#whatsapp {
+	background : url('res/projects/whatsapp_UI_clone.webp');
+	background-size : cover;
+}
+#facebook {
+	background : url('res/projects/facebook_signin_UI_clone.webp');
+	background-size : cover;
+}
+			/* Resume Section */
+section.resume {
+	background-color : var(--blue);
+}
+.resume img {
+	width : 100%;
+}
+		/* Contact Section */
+section.contact {
+	background-color : var(--grey);
+	padding : 0.1rem 0 0 0;
+}
+.query-form {
+	width: 95%;
+    margin: 10rem auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    row-gap: 1rem;
+    padding: 1rem 0;
+	box-sizing : border-box;
+}
+input[type=text] , input[type=email] {
+	border : none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+	width : 48%;
+	height : 4rem;
+    box-sizing: border-box;
+}
+
+#query {
+	width: 100%;
+	padding : 1rem;
+}
+.query-form input[type=submit] {
+	width: 100%;
+    margin: 0 auto;
+    height: 4rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--green);
+    color: var(--grey);
+    font-weight: 600;
+}
+.social-handles {
+	width : 95%;
+	display : flex;
+	flex-flow : row wrap;
+	justify-content : space-evenly;
+	
+}
+.social-logo {
+	width : 64px;
+	filter : grayscale(1);
+	transition : ease-in-out 1s;
+	cursor : pointer;
+}
+.social-logo:hover {
+	scale : 1.05;
+	filter : grayscale(0);
+	
+}
